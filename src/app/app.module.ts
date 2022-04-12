@@ -11,7 +11,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { LayoutModule } from './layout/layout.module';
 import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
+
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     LayoutModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    UsersModule
+    UsersModule,
+    MatListModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

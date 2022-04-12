@@ -5,7 +5,9 @@ import { ViewUsersComponent } from './view-users/view-users.component';
 import { AddUsersComponent } from './add-users/add-users.component';
 import { EditUsersComponent } from './edit-users/edit-users.component';
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
-
+import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -14,10 +16,13 @@ import { DeleteUsersComponent } from './delete-users/delete-users.component';
     ViewUsersComponent,
     AddUsersComponent,
     EditUsersComponent,
-    DeleteUsersComponent
+    DeleteUsersComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatListModule,
+    RouterModule,
+    MatCardModule
   ]
 })
 export class UsersModule { }
