@@ -8,7 +8,12 @@ import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
-
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, MAT_SNACK_BAR_DEFAULT_OPTIONS_FACTORY} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,25 @@ import {MatCardModule} from '@angular/material/card';
     AddUsersComponent,
     EditUsersComponent,
     DeleteUsersComponent,
-  ],
+  ],  
   imports: [
     CommonModule,
     MatListModule,
     RouterModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSlideToggleModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatSnackBarModule
+    
+
+    
+
+  ],providers: [
+  {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,useValue: {duration: 2500}}
   ]
 })
 export class UsersModule { }

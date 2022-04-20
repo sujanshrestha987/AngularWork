@@ -13,6 +13,7 @@ import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatListModule } from '@angular/material/list';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,14 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     HttpClientModule,
     UsersModule,
-    MatListModule,
+    
+    MatListModule
     
     
+  ],
+  exports: [
+    CommonModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

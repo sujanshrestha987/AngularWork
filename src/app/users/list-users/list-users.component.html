@@ -3,10 +3,17 @@
 </div>
 <div class = "main-content">
 
-  
-    
+    <h1 style="margin-left: 25px;">Displaying 10 user</h1> 
         <mat-card class='list-users' role="listitem " *ngFor=" let user of listUsers">
-            <span class="username">{{user.name}}</span> | <a class="action-link" [routerLink] ="['/users/view', user.id]">View</a>| <a class="action-link" [routerLink] ="['/users/edit', user.id]">Edit</a>|<a class = "action-link" [routerLink] ="['/users/delete', user.id]">Delete</a>
+               
+            <mat-card-title>
+                {{user.name}}
+            </mat-card-title>
+            <mat-card-content>
+                {{user.email}}
+            </mat-card-content> 
+            <mat-card-actions>| <a class="action-link" [routerLink] ="['/users/view', user.id]">View</a>| <a class="action-link" [routerLink] ="['/users/edit', user.id]">Edit</a>|<a class = "action-link" [routerLink] ="['/users/delete', user.id]">Delete</a>
+            </mat-card-actions>
         </mat-card>
     
 </div>
